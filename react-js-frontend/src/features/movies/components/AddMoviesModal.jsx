@@ -22,20 +22,18 @@ const AddMoviesModal = ({ showModal, setShowModal, parammovieEditId }) => {
   const [omdbData, setOMDBData] = useState(null);
   const [imagesjson, setImagesjson] = useState(null);
   const [omdbDatajson, setOMDBDatajson] = useState(null);
-  const [editMode, setEditMode] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   const dispatch = useDispatch();
   const omdbStateData = useSelector((state) => state.omdb.data);
   const {
-    movie: { data: editMovie, isLoading, error },
+    movie: { data: editMovie },
   } = useSelector((state) => state.movies)
 
   useEffect(() => {
     resetInputs();
     if (parammovieEditId) {
         // If the movie exists, 
-        setEditMode(true);
         dispatch(getMovieData({'id' : parammovieEditId}));
         }
   }, [showModal]);
@@ -120,9 +118,7 @@ const AddMoviesModal = ({ showModal, setShowModal, parammovieEditId }) => {
         } 
     
       };
-
       storeAndFetchMovies(newMovieData)
-
   };
 
   const handleDeleteMovie = (movieId) => {
@@ -180,8 +176,7 @@ const AddMoviesModal = ({ showModal, setShowModal, parammovieEditId }) => {
                   placeholder="Enter release year"
                 />
               </Form.Group>
-
-
+              
               <Form.Group controlId="images">
                 <Form.Label>Movie Images JSON</Form.Label>
                 <OMDBResponse readOnly value={imagesjson} />
@@ -194,7 +189,6 @@ const AddMoviesModal = ({ showModal, setShowModal, parammovieEditId }) => {
 
             </Form>
           </Col>
-
           <Col>
           {!parammovieEditId && <OMDBMovieSearch onMovieSelect={handleMovieSelect} />}
           </Col>

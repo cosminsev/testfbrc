@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import MainLogo from '../../components/Logo/logo'
-import { Button } from 'react-bootstrap';
 import styled from 'styled-components'
 import { MoviesTableHeader, MoviesTable } from '../../features/movies/components'
 import  AddMoviesModal from '../../features/movies/components/AddMoviesModal'

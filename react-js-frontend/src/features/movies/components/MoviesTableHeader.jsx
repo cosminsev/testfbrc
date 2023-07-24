@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { SearchBox } from '../../../components/Forms/SearchBox'
 import { CustomFilter } from '../../../components/Forms/CustomFilter'
 import { useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setFilters, setSearchQuery } from '../MoviesSlice'
 import { defaultFilters } from '../MoviesModel'
 

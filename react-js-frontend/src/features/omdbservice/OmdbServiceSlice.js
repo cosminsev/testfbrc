@@ -17,10 +17,10 @@ export const fetchOMDBDataByImdbId = createAsyncThunk(
 
 export const fetchOMDBDataByTitle = createAsyncThunk(
   'omdb/fetchByTitle',
-  async (title) => {
+  async ({ title, page = 1, appendData = false }) => {
     try {
-      const response = await axios.get(BASE_URL + `?title=${title}`);
-      return response.data;
+      const response = await axios.get(BASE_URL + `?title=${title}&page=${page}`);
+      return {data: response.data, appendData};
     } catch (error) {
       throw Error('Failed to fetch OMDB data by title');
     }
@@ -29,7 +29,9 @@ export const fetchOMDBDataByTitle = createAsyncThunk(
 
 const initialState = {
   data: null,
-  search: null,
+  searchdata: null,
+  searchresno: 0,
+  appendData: false,
   status: 'idle',
   error: null,
 };
@@ -56,7 +58,7 @@ const omdbSlice = createSlice({
       })
       .addCase(fetchOMDBDataByTitle.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.search = action.payload.Search;
+        state.searchdata = action.payload;
       })
       .addCase(fetchOMDBDataByTitle.rejected, (state, action) => {
         state.status = 'idle';
