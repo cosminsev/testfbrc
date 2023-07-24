@@ -1,0 +1,74 @@
+@import './variables.scss';
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-max}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+ }
+
+ @mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+ }
+
+
+main{
+    @include md {
+        flex-direction: column;
+    }
+}
+
+main .aside{
+    @include md {
+        width: 100% !important
+    }
+ }
+ 
+ @include md {
+    .add-organization-text-wrapper{
+        display:none !important
+    }
+    .add-organization-text-wrapper + div{
+        width: 100% !important;
+        margin: 20px auto 0;
+    }
+    // .text-md-link{
+    //     color: #0000EE !important
+    // }
+    // .welcome h3{
+    //     max-width: 80%;
+    //     margin: 40px auto !important;
+    // }
+    // .welcome h5{
+    //     text-align: center;
+    // }
+    // .welcome .organisation-row{
+    //     padding: 15px 12px;
+    // }
+    .footer{
+        flex-direction: column;
+    }
+ }

@@ -1,0 +1,33 @@
+$font-family: 'Open Sans';
+
+// Colors
+$color-primary-red: #E60100;
+$color-primary-blue: #29578a;
+$color-primary-black: #121212;
+
+$color-state-error: #e94141;
+$color-state-warning: #e9a641;
+$color-state-success: #49c464;
+
+$color-secondary-black: #395264;
+$color-secondary-grey: #617b8e;
+$color-secondary-messy-blue: #8ca6ba;
+$color-secondary-light-blue: #b9d4e8;
+
+$color-neutral-dark-grey: #6D757D;
+$color-neutral-medium-grey: #d3d4d8;
+$color-neutral-regular-grey: #f0f1f3;
+$color-neutral-light-grey: #fafafa;
+$color-neutral-white: #ffffff;
+
+$bold-font: 600;
+
+// responsive variables
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+// Tablets and small desktops
+$screen-lg-max: 992px;
+// Large tablets and desktops
+$screen-xl-max: 1200px;

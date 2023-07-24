@@ -1,0 +1,198 @@
+.load-container {
+    margin: 20px 8px 20px 8px;
+
+    @media (min-width:600px) {
+        margin: 40px 8px 40px 8px;
+    }
+
+}
+
+.snack-wrapper {
+    padding: 0 12px 0 12px;
+}
+
+.form-wrapper {
+    padding: 0 12px 0 12px;
+
+    .form-container {
+        margin: 20px 0 20px 0;
+
+        @media (min-width:768px) {
+            margin: 40px 0 40px 0;
+        }
+
+        .form-rows {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px 0 5px 0;
+
+            @media (min-width:768px) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 20px 0 20px 0;
+            }
+        }
+
+        .form-label {
+            width: 100%;
+
+            @media (min-width:768px) {
+                width: 70%;
+            }
+        }
+
+        .form-input-container {
+            width: 100%;
+            box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.05);
+
+            @media (min-width:468px) {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (min-width:768px) {
+                display: block;
+            }
+
+            .form-input {
+                width: 100%;
+                padding-right: 16px;
+                cursor: pointer;
+
+                @media (min-width:768px) {
+                    width: 356.5px;
+                }
+
+            }
+        }
+
+        .form-phone-wrapper {
+            width: 100%;
+            display: flex;
+
+            .phone-input-container {
+                display: block;
+                width: 100%;
+
+                @media (min-width:310px) {
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 1 1 auto;
+                }
+
+                @media (min-width:768px) {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 356.5px;
+                }
+
+                input {
+                    box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.05);
+
+                }
+
+                .phone-prefix {
+                    box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.05);
+                }
+
+                .phone-input {
+                    margin-top: 10px;
+                    width: 100%;
+
+                    @media (min-width:310px) {
+                        margin-top: 0;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .form-validation {
+            width: 90%;
+            margin-top: 7px;
+            font-size: 14.5px;
+            text-align: right;
+
+            @media (min-width:768px) {
+                width: 70%;
+                margin-top: 0;
+                font-size: 15.5px;
+                text-align: right;
+            }
+
+            .incompleted {
+                color: #E94141;
+            }
+
+            .completed {
+                color: #11c711;
+            }
+        }
+    }
+
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+
+
+    .verify-button {
+        background-color: #F0F1F3;
+        color: #6d757d;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.15);
+
+
+        @media (min-width:768px) {
+            cursor: pointer;
+            width: auto;
+        }
+    }
+
+    .verify-button-active {
+        background-color: #e60100;
+        color: #f4f6f8;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 4px;
+
+
+        @media (min-width:600px) {
+            cursor: pointer;
+            width: auto;
+            // text-decoration: underline;
+        }
+    }
+}
+
+.form-button {
+    display: block;
+    margin-bottom: 20px;
+
+    button {
+        width: 100%;
+        padding: 8px 10px;
+        box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.15);
+
+        @media (min-width:768px) {
+            padding: 12px 20px;
+        }
+
+    }
+
+    @media (min-width:768px) {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+}

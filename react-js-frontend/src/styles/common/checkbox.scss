@@ -1,0 +1,37 @@
+.sf-checkboxes-input {
+  display: flex;
+  margin: 15px 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input {
+  &:checked {
+    + .sf-custom-checkbox-input {
+      background-color: $color-primary-blue;
+
+      &:after {
+        content: url('../../assets/icons/Check.svg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    + .sf-custom-radio-input {
+      border: 1px solid $color-primary-blue;
+
+      span {
+        background-color: #29578A;
+        border-radius: 50%;
+        width: 9px;
+        height: 9px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

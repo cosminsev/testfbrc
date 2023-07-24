@@ -1,0 +1,11 @@
+.main-logo {
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (min-width: 3840px) {
+    img {
+      width: 388px;
+      height: 128px;
+    }
+  }
+}

@@ -1,0 +1,353 @@
+.auth-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  @media only screen and (min-width: 768px) {
+    height: min(100vh, 1080px);
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  &.forgot-password-page,
+  &.create-pass-page {
+    background-color: #ffffff;
+  }
+}
+
+.user-forms {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: min(3%, 30px);
+  padding-inline: 30px;
+  height: 100%;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: min(6%, 60px);
+    padding-inline: 60px;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+    padding-top: min(2%, 30px);
+    padding-inline: 30px;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    padding-top: min(12%, 120px);
+    padding-inline: 120px;
+  }
+
+  .user-forms-main-icon {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .user-forms-footer {
+    display: block;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: $color-neutral-dark-grey;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: auto;
+      padding-top: 0;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+      margin-top: auto;
+      margin-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    @media only screen and (min-width: 3840px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    a {
+      display: inline-block;
+      font-weight: $bold-font;
+    }
+  }
+}
+
+.sf-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 0 1rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    input {
+      font-size: 200%;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.sf-input-wrapper-login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12px;
+
+  @media only screen and (min-width: 3840px) {
+    input {
+      font-size: 200%;
+
+    }
+  }
+
+
+  :first-child {
+    margin-bottom: 0;
+  }
+
+  :nth-child(2) {
+    margin-bottom: 0;
+  }
+
+}
+
+.sf-form-container {
+  width: 100%;
+  height: 100%;
+
+
+  @media only screen and (min-width: 768px) {
+    max-width: 450px;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    max-width: 900px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+
+.sf-input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+
+  @media only screen and (min-width: 3840px) {
+    margin-bottom: 60px;
+  }
+
+  &.margin {
+    margin-bottom: 0;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .sf-input-email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    @media only screen and (min-width: 3840px) {
+      margin-bottom: 60px;
+    }
+
+    @media only screen and (min-width: 3840px) {
+      input {
+        font-size: 200%;
+      }
+    }
+
+    .sf-form-label {
+      @extend .form-text-style;
+      font-size: 14px;
+      margin-bottom: 7px;
+
+      @media only screen and (min-width: 3840px) {
+        font-size: 28px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+}
+
+
+.sf-form-label {
+  @extend .form-text-style;
+  font-size: 14px;
+  margin-bottom: 7px !important;
+
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 28px;
+  }
+}
+
+//  General style
+
+.form-text-style {
+  font-weight: $bold-font;
+  color: $color-primary-black;
+  font-size: 14px;
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 28px;
+  }
+}
+
+//  --- General style ---
+
+.sf-form-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  box-shadow: 0 0.188rem 0.313rem 0.125rem rgba(0, 0, 0, 0.15);
+}
+
+.sf-link-button {
+  padding: 17px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sf-forgot-link {
+  color: $color-secondary-grey;
+  font-size: 14px;
+  font-weight: $bold-font;
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 28px;
+  }
+}
+
+.sf-form-title {
+  @extend .form-text-style;
+  font-size: 20px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+    font-size: 20px;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 48px;
+  }
+
+  &__container {
+    margin: min(5%, 30px) auto min(10%, 72px);
+    text-align: center;
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+      margin: min(2.5%, 30px) auto min(5%, 72px);
+    }
+  }
+}
+
+.sf-form-subtitle {
+  font-size: 14px;
+  color: $color-secondary-black;
+  margin-top: 10px;
+}
+
+.sf-error-message {
+  margin-top: 5px;
+}
+
+.sf-pass-strength {
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    span {
+      transition: all 0.5s ease;
+      background: #d3d4d8;
+      width: 14.566%;
+      height: 6px;
+      margin-right: 15px;
+      border-radius: 2px;
+
+      @media only screen and (min-width: 3840px) {
+        width: 29.132%;
+      }
+    }
+  }
+
+  &__status {
+    font-size: 12px;
+    color: $color-neutral-dark-grey;
+    white-space: nowrap;
+
+    @media only screen and (min-width: 3840px) {
+      font-size: 24px;
+    }
+  }
+
+  &__items-container {
+    ul {
+      columns: 2;
+      padding-left: 20px;
+
+      li {
+        font-size: 12px;
+        padding: 8px 0;
+        color: $color-secondary-black;
+
+        @media only screen and (min-width: 3840px) {
+          font-size: 24px;
+        }
+
+        &.colored {
+          &::marker {
+            color: #52b405;
+          }
+        }
+
+        &::marker {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

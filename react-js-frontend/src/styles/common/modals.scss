@@ -1,0 +1,281 @@
+// Modals
+.modal-backdrop {
+  background-color: rgba(57, 82, 100, 1);
+}
+
+.modal {
+  border-radius: 8px;
+
+  h3 {
+    color: inherit;
+  }
+
+  &.centered {
+    .modal-dialog {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+
+  .modal-content {
+    border-radius: 19px; //8
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 24px 40px;
+  }
+
+  .modal-footer {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 24px;
+
+    button {
+      &.close {
+        max-width: 98px;
+      }
+
+      &.save {
+        max-width: 206px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &.footer-content-right {
+    .modal-footer {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.sf-add-account-modal {
+  .modal-dialog {
+    height: 100%;
+    margin: 0 0 0 auto;
+    max-width: 530px;
+  }
+
+  .modal-content {
+    min-height: 100%;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+    border: none;
+  }
+
+  .modal-body {
+    flex: inherit;
+  }
+
+  .modal-footer {
+    padding: 0 40px;
+  }
+
+  &.modal-static {
+    .modal-dialog {
+      transform: none;
+
+      .close {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.sf-scrolled-body {
+  .modal-body {
+    height: calc(100vh - 140px);
+    overflow: auto;
+  }
+}
+
+.sf-lock-user-modal {
+  &.sf-unlock-user-modal {
+    .modal-dialog {
+      max-width: 635px;
+    }
+  }
+
+  .modal-dialog {
+    max-width: 1152px;
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  h3,
+  .h3-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #4E4E5A;
+  }
+
+  .modal-footer {
+    padding: 0 40px 24px;
+
+    button {
+      margin: 0;
+    }
+  }
+}
+
+.sf-edit-table-columns-modal {
+  .modal-dialog {
+    max-width: fit-content;
+  }
+
+  .modal-header {
+    padding: 15px 20px;
+  }
+
+  .modal-body {
+    padding: 0 20px;
+    display: flex;
+
+    .sf-checkboxes-input {
+      margin: 15px 50px 15px 0;
+    }
+  }
+
+  .modal-footer {
+    justify-content: flex-end;
+  }
+}
+
+.sf-test-request-marketplace-modal {
+  .modal-dialog {
+    max-width: 875px;
+  }
+
+  .close {
+    margin-right: 25px;
+  }
+}
+
+.sf-rent-ip-modal {
+  .modal-dialog {
+    max-width: 875px;
+  }
+
+  .sf-input-container {
+    margin-bottom: auto;
+  }
+}
+
+.sf-onboarding-modal {
+  .modal-dialog {
+    max-width: 1262px;
+    width: 100%;
+    position: relative;
+  }
+
+  .modal-content {
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+
+    @media only screen and (min-width: 915px) {
+      height: 100%;
+      max-height: 85%;
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 915px) and (orientation: landscape) {
+      height: 100%;
+      max-height: 100%;
+      position: relative;
+    }
+  }
+
+  .modal-header {
+    display: none;
+
+    @media only screen and (min-width: 915px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -32px;
+      z-index: 1;
+      padding: 0;
+      border: 0;
+
+      button {
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .modal-body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: overlay;
+    padding: 0;
+
+
+    @media only screen and (min-width: 915px) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      min-height: 85%;
+      overflow: visible;
+      padding: 0;
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 915px) and (orientation: landscape) {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: overlay;
+    }
+
+  }
+
+  .modal-body>div {
+    position: relative;
+    padding: 4% 12px 0;
+
+
+    @media only screen and (min-width: 915px) {
+      position: static;
+      border-top-left-radius: 19px;
+      border-bottom-left-radius: 19px;
+      padding: 5% 5% 5%;
+      top: 0;
+
+      &:first-child {
+        position: relative;
+        padding: 0;
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          max-width: none;
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+          position: relative;
+          padding: 4% 12px 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+      }
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 915px) and (orientation: landscape) {
+      padding: 4% 12px 4%;
+    }
+  }
+
+}
