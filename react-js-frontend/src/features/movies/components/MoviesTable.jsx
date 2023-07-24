@@ -44,6 +44,7 @@ export const MoviesTable = () => {
   const columns = [
     { name: 'id', label: 'ID' },
     { name: 'action', label: 'action', hideSortBy: true },
+    { name: 'imdb_id', label: 'IMDB Id' },
     { name: 'title', label: 'Title' },
     { name: 'release_year', label: 'Release Year' },
     { name: 'images', label: 'Images', hideSortBy: true },
@@ -61,9 +62,9 @@ export const MoviesTable = () => {
           </div>
         </TableBodyActionCell>
       ),
+      imdb_id: row.imdb_id,
       title: row.title,
       release_year: row.release_year,
-      imdb_id: row.imdb_id,
       images: JSON.stringify(row.images),
       omdb_data: JSON.stringify(row.omdb_data),
       
