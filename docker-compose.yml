@@ -1,0 +1,34 @@
+version: '3'
+services:
+  laravel:
+    build:
+      context: ./laravel-rms
+    ports:
+      - "8080:8080"
+    depends_on:
+      - laravel_mysql
+  laravel_mysql:
+    image: mysql:8.0.33
+    container_name: laravel_mysql
+    volumes:
+      - ./db_data/db:/var/lib/mysql
+    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=moviesrms
+      - MYSQL_ROOT_USER=root
+    restart: always
+    ports:
+      - "3307:3306"
+
+  nodejs:
+    build:
+      context: ./omdb-integration-service
+    ports:
+      - "3005:3005"
+
+  reactjs:
+    build:
+      context: ./react-js-frontend
+    ports:
+      - "3010:3010"
